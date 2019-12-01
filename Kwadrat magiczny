@@ -1,4 +1,4 @@
-def kwadrat_magiczny(A):
+def kwadrat_magiczny(A): #A to macierz
     n = len(A)
     m = len(A[0])
     if n == m:
@@ -23,6 +23,6 @@ def kwadrat_magiczny(A):
         for i in range (n):
             sum_diagonal += A[i][i]
             sum_diagonal2 += A[len(A)-1][len(A)-1]
-        if sum_diagonal != suma_diagonal2 or sum_diagonal2 != suma_column:
+        if sum_diagonal != sum_diagonal2 or sum_diagonal2 != suma_column:
             return False
     return True
