@@ -1,4 +1,4 @@
-def kwadrat_magiczny(A): #A to macierz
+def magic_square(A): #A to macierz
     n = len(A)
     m = len(A[0])
     if n == m:
