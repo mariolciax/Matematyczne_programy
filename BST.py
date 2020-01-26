@@ -86,3 +86,23 @@
         licznik = [0]
         _licz_droge(self.root, licznik)
         return licznik
+       
+       
+    def licz_droge_do_liscia(self, leaf):
+        licznik = 0
+        tmp = self.root
+        while tmp != None:
+            if tmp.key == leaf:
+                return licznik
+            if tmp.left == leaf or tmp.right == leaf:
+                licznik += 1
+                return licznik
+            elif tmp.key > leaf:
+                licznik += 1
+                tmp = tmp.right
+            elif tmp.key < leaf:
+                licznik += 1
+                tmp = tmp.left
+
+
+        return licznik
