@@ -38,6 +38,19 @@
         _items(self.korzen, x)
         return x
        
+      def wypisz_liście(self):
+        def _wypisz_liscie(node, leaf):
+            if node is None:
+                return
+            if node.left is None and node.right is None:
+                leaf.append((node.key))
+            else:
+                _wypisz_liscie(node.left, leaf)
+                _wypisz_liscie(node.right, leaf)
+
+        leaf = []
+        _wypisz_liscie(self.root, leaf)
+        return leaf
      def liczliscie(self):
         def _liczliscie(node):
             licznik = 0
