@@ -38,6 +38,21 @@
         _items(self.korzen, x)
         return x
        
+     def liczliscie(self):
+        def _liczliscie(node):
+            licznik = 0
+
+            if node is None:
+                return 0
+            elif node.left == None and node.right == None:
+                licznik += 1
+                return licznik
+            else:
+                left = _liczliscie(node.left)
+                right = _liczliscie(node.right)
+            return left + right
+        return _liczliscie(self.root)
+       
     def licz_droge(self):
         def _licz_droge(node, licznik):
             if node is None:
