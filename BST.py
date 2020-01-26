@@ -37,3 +37,24 @@
         x = [0]
         _items(self.korzen, x)
         return x
+       
+    def licz_droge(self):
+        def _licz_droge(node, licznik):
+            if node is None:
+                return licznik
+            if node.left is None and node.right is None:
+                return licznik
+            if node.left is not None and node.right is None:
+                licznik[0] += 1
+                _licz_droge(node.left, licznik)
+            if node.left is None and node.right is not None:
+                licznik[0] += 1
+                _licz_droge(node.right, licznik)
+            if node.left is not None and node.right is not None:
+                licznik[0] += 2
+                _licz_droge(node.right, licznik)
+                _licz_droge(node.left, licznik)
+
+        licznik = [0]
+        _licz_droge(self.root, licznik)
+        return licznik
