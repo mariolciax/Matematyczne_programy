@@ -112,12 +112,15 @@
              p=""                       # z podanym wcięciem (zaczynając od 0)
              i=intend
              while i>0:
-             if i>1: p+="    +"
-             else: p+="    ";
-             i-=1 #generowanie wcięcia
+                if i>1:
+                      p+="    +"
+                else:
+                      p+="    ";
+                 i-=1 #generowanie wcięcia
              if(self.isNode()):
-             print(p+"+"+self.name) #jeśli ma dzieci, rysuje +
+                 print(p+"+"+self.name) #jeśli ma dzieci, rysuje +
              else:
-             print(p+"-"+self.name) #nie posiada, -
+                 print(p+"-"+self.name) #nie posiada, -
+             
              for c in self.getChilds(): #i to samo dla każdego dziecka
-             c.printTree(intend+1)  #ze zwiększonym wcięciem
+                   c.printTree(intend+1)  #ze zwiększonym wcięciem
