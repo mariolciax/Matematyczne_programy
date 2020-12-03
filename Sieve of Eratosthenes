@@ -1,0 +1,43 @@
+Function sieve(n As Long) As Double()
+    
+    Dim i As Long
+    Dim w As Long
+    Dim Tablica() As Boolean
+    ReDim Tablica(n)
+
+    For i = 1 To n
+        Tablica(i) = True
+    Next i
+
+    For i = 2 To n
+        w = i + i
+        Do While (w <= n)
+          Tablica(w) = False
+        w = w + i
+        Loop
+    Next i
+
+    Dim dlugosc As Long
+    Dim Tabl() As Double
+    dlugosc = 0
+    For i = 2 To n
+        If Tablica(i) = True Then
+            dlugosc = dlugosc + 1
+        End If
+    Next i
+    Dim j As Long
+    ReDim Tabl(dlugosc - 1)
+    j = 0
+    For i = 2 To n
+        If Tablica(i) = True Then
+            Tabl(j) = i
+            j = j + 1
+        End If
+    Next i
+
+    sieve = Tabl()
+
+End Function
+
+
+
