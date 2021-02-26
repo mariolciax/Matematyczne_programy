@@ -1,5 +1,5 @@
 function [X, info] = invU(A)
-% Finding inverse of a triangular matrix
+% Finding inverse of a triangular matrix in MATLAB
 % X correct, when info=1; other info=0
 EPS=1e-10;
 [m,n] = size(A);
