@@ -1,7 +1,6 @@
 function val_poly = my_polyval(w,x)
-%wartość wielomianu
-% w tablica współczynników 
-% wartośc dla punktu
+  
+  
 val_poly = 0;
 n = length(w);
 for s = 2:n
