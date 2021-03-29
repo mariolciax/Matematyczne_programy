@@ -1,9 +1,9 @@
 function det = metGE(A)
-%Obliczanie wartości wyznacznika macierzy trójdiagonalnej 
-%zastosowanie metody eliminacji Gaussa (GE)
-% Wywołanie: det = metGE(A)
-% WEJ: A- macierz trójdiagonalna
-% Wyj: det - wyznacznik badanej macierzy
+    %Obliczanie wartości wyznacznika macierzy trójdiagonalnej 
+    %zastosowanie metody eliminacji Gaussa (GE)
+    % Wywołanie: det = metGE(A)
+    % WEJ: A- macierz trójdiagonalna
+    % Wyj: det - wyznacznik badanej macierzy
     if A(1,1) == 0
         det = "Metoda nie jest wykonalna";
         return
