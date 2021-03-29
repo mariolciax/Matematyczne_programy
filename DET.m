@@ -25,6 +25,6 @@ for j = 2 : n  % wiersze
 end
 det = 1;
 for i=1:n  % liczymy wyznacznik
-    det = det* B(i, i);
+    det = det * B(i, i);
 end 
 end
